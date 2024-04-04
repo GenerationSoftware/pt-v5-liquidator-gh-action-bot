@@ -47,6 +47,7 @@ jobs:
         id: runBot
         # working-directory: ./foundry-winner-calc
         run: |
+          npm install
           node index.js
 
       # 7. Commit
