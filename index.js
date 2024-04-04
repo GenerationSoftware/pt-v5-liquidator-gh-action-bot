@@ -1,3 +1,5 @@
+import nodeFetch from 'node-fetch';
+import { downloadContractsBlob } from '@generationsoftware/pt-v5-utils-js';
 import {
   getProvider,
   instantiateRelayerAccount,
@@ -5,15 +7,13 @@ import {
   runLiquidator
 } from '@generationsoftware/pt-v5-autotasks-library';
 
+
 const main = async () =>{
   const envVars = loadLiquidatorEnvVars();
-  console.log('envVars')
-  console.log(envVars)
   const provider = getProvider(envVars);
 
   const relayerAccount = await instantiateRelayerAccount(
     provider,
-    null,
     envVars.CUSTOM_RELAYER_PRIVATE_KEY,
   );
 
