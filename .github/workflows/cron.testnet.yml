@@ -1,0 +1,85 @@
+name: CronJob
+on:
+  schedule:
+    - cron: "*/5 * * * *" # ie. 4:10pm, 4:15pm, 4:20pm, etc.
+  push:
+env:
+  CHAIN_ID: ${{secrets.CHAIN_ID}}
+  JSON_RPC_URI: ${{secrets.JSON_RPC_URI}}
+  COVALENT_API_KEY: ${{secrets.COVALENT_API_KEY}}
+  USE_FLASHBOTS: ${{secrets.USE_FLASHBOTS}}
+  MIN_PROFIT_THRESHOLD_USD: ${{secrets.MIN_PROFIT_THRESHOLD_USD}}
+  CUSTOM_RELAYER_PRIVATE_KEY: ${{secrets.CUSTOM_RELAYER_PRIVATE_KEY}}
+  SWAP_RECIPIENT: ${{secrets.SWAP_RECIPIENT}}
+  NODE_OPTIONS: "--max_old_space_size=NODE_OPTIONS8"
+permissions: write-all
+jobs:
+  runCLI:
+    name: Winners Compute
+    runs-on: ${{ matrix.os }}
+    strategy:
+      max-parallel: 1
+      matrix:
+        node: ["20.11.1"]
+        os: [ubuntu-latest]
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+      
+      - name: Use Node ${{ matrix.node }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+      
+      # - name: Clone foundry-winner-calc repo
+      #   uses: actions/checkout@master
+      #   with:
+      #     repository: GenerationSoftware/foundry-winner-calc
+      #     path: './foundry-winner-calc'
+
+      # -------------------------------------------------------- #
+      # Optimism Sepolia
+      # -------------------------------------------------------- #
+
+      - name: Run bot
+        id: runBot
+        # working-directory: ./foundry-winner-calc
+        run: |
+          node index.js
+
+      # 7. Commit
+      # - name: Commit Optimism Sepolia
+      #   if: steps.vaultAccountsOptimismSepolia.outputs.runStatus == 'true'
+      #   continue-on-error: true
+      #   run: |
+      #     git config pull.rebase false
+      #     git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      #     git config --local user.name "github-actions[bot]"
+      #     git pull
+      #     git add ./winners
+      #     git commit -m "Add testnet winner results for Optimism Sepolia draw #${{steps.vaultAccountsOptimismSepolia.outputs.drawId}}"
+
+      # 8. Push
+      # - name: Push changes (if required)
+      #   uses: ad-m/github-push-action@master
+      #   if: steps.vaultAccountsOptimismSepolia.outputs.runStatus == 'true'
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     branch: ${{ github.ref }}
+      #     force: true
+
+      # Optionally:
+      # - name: Comment Error
+      #   id: commentError
+      #   if: steps.vaultAccountsOptimismSepolia.outputs.exitcode == 1
+      #   uses: actions/github-script@v5
+      #   continue-on-error: true
+      #   with:
+      #     script: |
+      #       await github.rest.issues.create({
+      #         owner: context.repo.owner,
+      #         repo: context.repo.repo,
+      #         title: `Draw #${{steps.vaultAccountsOptimismSepolia.outputs.drawId}} Winner Calc Failed: Exit Code 1`
+      #       })
