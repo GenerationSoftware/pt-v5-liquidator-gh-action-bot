@@ -1,0 +1,17 @@
+{
+    "include": ["utils"],
+    "exclude": ["node_modules"],
+    "compilerOptions": {
+      "baseUrl": ".",
+      "outDir": "dist",
+      "target": "es2020",
+      "esModuleInterop": true,
+      "module": "esnext",
+      "moduleResolution": "node",
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "skipLibCheck": true,
+      "strict": true
+    }
+  }
+  
