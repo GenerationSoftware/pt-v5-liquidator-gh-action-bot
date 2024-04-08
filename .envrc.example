@@ -1,7 +1,6 @@
 export CHAIN_ID=''
 export JSON_RPC_URI=''
 export COVALENT_API_KEY=''
-export USE_FLASHBOTS=''
 export MIN_PROFIT_THRESHOLD_USD=''
 export CUSTOM_RELAYER_PRIVATE_KEY=
 export SWAP_RECIPIENT=''

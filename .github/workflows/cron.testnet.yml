@@ -15,7 +15,7 @@ env:
 permissions: write-all
 jobs:
   runCLI:
-    name: Winners Compute
+    name: Liquidator Bot
     runs-on: ${{ matrix.os }}
     strategy:
       max-parallel: 1
