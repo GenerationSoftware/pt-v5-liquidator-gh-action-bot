@@ -4,13 +4,12 @@ on:
     - cron: "*/5 * * * *" # ie. 4:10pm, 4:15pm, 4:20pm, etc.
   push:
 env:
-  CHAIN_ID: ${{secrets.CHAIN_ID}}
+  CHAIN_ID: 11155420
+  MIN_PROFIT_THRESHOLD_USD: 0.1
+  SWAP_RECIPIENT: '0x1169333d6c2f5BB5E3f8A1C075bc4d068e5ea41e'
   JSON_RPC_URI: ${{secrets.JSON_RPC_URI}}
   COVALENT_API_KEY: ${{secrets.COVALENT_API_KEY}}
-  USE_FLASHBOTS: ${{secrets.USE_FLASHBOTS}}
-  MIN_PROFIT_THRESHOLD_USD: ${{secrets.MIN_PROFIT_THRESHOLD_USD}}
   CUSTOM_RELAYER_PRIVATE_KEY: ${{secrets.CUSTOM_RELAYER_PRIVATE_KEY}}
-  SWAP_RECIPIENT: ${{secrets.SWAP_RECIPIENT}}
   NODE_OPTIONS: "--max_old_space_size=32768"
 permissions: write-all
 jobs:
