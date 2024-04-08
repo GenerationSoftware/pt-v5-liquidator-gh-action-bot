@@ -32,23 +32,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
-      
-      # - name: Clone foundry-winner-calc repo
-      #   uses: actions/checkout@master
-      #   with:
-      #     repository: GenerationSoftware/foundry-winner-calc
-      #     path: './foundry-winner-calc'
-
-      # -------------------------------------------------------- #
-      # Optimism Sepolia
-      # -------------------------------------------------------- #
 
       - name: Run bot
         id: runBot
-        # working-directory: ./foundry-winner-calc
         run: |
           npm install
-          node index.js
+          npm run start
 
       # 7. Commit
       # - name: Commit Optimism Sepolia

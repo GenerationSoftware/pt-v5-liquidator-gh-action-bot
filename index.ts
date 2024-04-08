@@ -4,12 +4,15 @@ import {
   getProvider,
   instantiateRelayerAccount,
   loadLiquidatorEnvVars,
-  runLiquidator
+  runLiquidator,
+  LiquidatorEnvVars,
+  LiquidatorConfig,
+  RelayerAccount,
 } from '@generationsoftware/pt-v5-autotasks-library';
 
 
 const main = async () =>{
-  const envVars = loadLiquidatorEnvVars();
+  const envVars: LiquidatorEnvVars = loadLiquidatorEnvVars();
   const provider = getProvider(envVars);
 
   const relayerAccount = await instantiateRelayerAccount(
