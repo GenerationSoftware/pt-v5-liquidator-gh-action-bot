@@ -1,6 +1,9 @@
-import nodeFetch from 'node-fetch';
-import { BaseProvider } from '@ethersproject/providers';
-import { downloadContractsBlob, ContractsBlob } from '@generationsoftware/pt-v5-utils-js';
+import nodeFetch from "node-fetch";
+import { BaseProvider } from "@ethersproject/providers";
+import {
+  downloadContractsBlob,
+  ContractsBlob,
+} from "@generationsoftware/pt-v5-utils-js";
 import {
   getProvider,
   instantiateRelayerAccount,
@@ -9,17 +12,20 @@ import {
   LiquidatorEnvVars,
   LiquidatorConfig,
   RelayerAccount,
-} from '@generationsoftware/pt-v5-autotasks-library';
+} from "@generationsoftware/pt-v5-autotasks-library";
 
-
-const main = async () =>{
+const main = async () => {
   const envVars: LiquidatorEnvVars = loadLiquidatorEnvVars();
   const provider: BaseProvider = getProvider(envVars);
+  console.log("provider");
+  console.log(provider);
 
   const relayerAccount: RelayerAccount = await instantiateRelayerAccount(
     provider,
-    envVars.CUSTOM_RELAYER_PRIVATE_KEY,
+    envVars.CUSTOM_RELAYER_PRIVATE_KEY
   );
+  console.log("relayerAccount");
+  console.log(relayerAccount);
 
   const config: LiquidatorConfig = {
     ...relayerAccount,
@@ -31,11 +37,14 @@ const main = async () =>{
   };
 
   try {
-    const contracts: ContractsBlob = await downloadContractsBlob(config.chainId, nodeFetch);
+    const contracts: ContractsBlob = await downloadContractsBlob(
+      config.chainId,
+      nodeFetch
+    );
     await runLiquidator(contracts, config);
   } catch (error) {
     throw new Error(error);
   }
-}
+};
 
-main() 
+main();
