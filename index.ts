@@ -17,15 +17,11 @@ import {
 const main = async () => {
   const envVars: LiquidatorEnvVars = loadLiquidatorEnvVars();
   const provider: BaseProvider = getProvider(envVars);
-  console.log("provider");
-  console.log(provider);
 
   const relayerAccount: RelayerAccount = await instantiateRelayerAccount(
     provider,
     envVars.CUSTOM_RELAYER_PRIVATE_KEY
   );
-  console.log("relayerAccount");
-  console.log(relayerAccount);
 
   const config: LiquidatorConfig = {
     ...relayerAccount,
