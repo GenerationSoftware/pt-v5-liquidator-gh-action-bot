@@ -1,5 +1,6 @@
 import nodeFetch from 'node-fetch';
-import { downloadContractsBlob } from '@generationsoftware/pt-v5-utils-js';
+import { BaseProvider } from '@ethersproject/providers';
+import { downloadContractsBlob, ContractsBlob } from '@generationsoftware/pt-v5-utils-js';
 import {
   getProvider,
   instantiateRelayerAccount,
@@ -13,25 +14,24 @@ import {
 
 const main = async () =>{
   const envVars: LiquidatorEnvVars = loadLiquidatorEnvVars();
-  const provider = getProvider(envVars);
+  const provider: BaseProvider = getProvider(envVars);
 
-  const relayerAccount = await instantiateRelayerAccount(
+  const relayerAccount: RelayerAccount = await instantiateRelayerAccount(
     provider,
     envVars.CUSTOM_RELAYER_PRIVATE_KEY,
   );
 
-  const config = {
+  const config: LiquidatorConfig = {
     ...relayerAccount,
     provider,
     covalentApiKey: envVars.COVALENT_API_KEY,
     chainId: envVars.CHAIN_ID,
     swapRecipient: envVars.SWAP_RECIPIENT,
-    useFlashbots: envVars.USE_FLASHBOTS,
     minProfitThresholdUsd: Number(envVars.MIN_PROFIT_THRESHOLD_USD),
   };
 
   try {
-    const contracts = await downloadContractsBlob(config.chainId, nodeFetch);
+    const contracts: ContractsBlob = await downloadContractsBlob(config.chainId, nodeFetch);
     await runLiquidator(contracts, config);
   } catch (error) {
     throw new Error(error);
