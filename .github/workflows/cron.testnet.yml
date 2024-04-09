@@ -34,14 +34,14 @@ jobs:
 
       - name: Get current date
         id: date
-        run: echo "date=$(date +'%Y-%m-%d--%Hh%Mm%Ss-%Z')" >> "$GITHUB_ENV"
+        run: echo "date=$(date +'%Y-%m-%d--%H-%M-%S--%Z')" >> "$GITHUB_ENV"
 
       - name: Run bot
         id: runBot
         run: |
           npm install
           printf '%s\n' "$date"
-          npx tsx index.ts | tee logs/log__"$date".txt
+          mkdir -p logs && npx tsx index.ts | tee logs/"$date".log
 
       - name: Commit Logs
         continue-on-error: true
