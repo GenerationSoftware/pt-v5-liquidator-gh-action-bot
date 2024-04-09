@@ -10,6 +10,7 @@ env:
   JSON_RPC_URI: ${{secrets.JSON_RPC_URI}}
   COVALENT_API_KEY: ${{secrets.COVALENT_API_KEY}}
   CUSTOM_RELAYER_PRIVATE_KEY: ${{secrets.CUSTOM_RELAYER_PRIVATE_KEY}}
+  ENV_TOKEN_ALLOW_LIST: ''
   NODE_OPTIONS: "--max_old_space_size=32768"
 permissions: write-all
 jobs:
