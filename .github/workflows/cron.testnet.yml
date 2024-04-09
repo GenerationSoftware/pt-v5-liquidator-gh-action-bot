@@ -36,7 +36,7 @@ jobs:
         id: runBot
         run: |
           npm install
-          tsx index.ts | tee out.log
+          npx tsx index.ts | tee out.log
           cat out.log
           cat out.log
           cat out.log
