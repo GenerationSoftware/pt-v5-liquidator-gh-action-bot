@@ -36,7 +36,10 @@ jobs:
         id: runBot
         run: |
           npm install
-          npm run start
+          tsx index.ts | tee out.log
+          cat out.log
+          cat out.log
+          cat out.log
 
       # 7. Commit
       # - name: Commit Optimism Sepolia
