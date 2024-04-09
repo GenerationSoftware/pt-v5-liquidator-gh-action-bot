@@ -43,7 +43,6 @@ jobs:
           npx tsx index.ts | tee log-${{ steps.date.outputs.date }}.txt
 
       - name: Commit Logs
-        if: steps.runBot.outputs.runStatus == 'true'
         continue-on-error: true
         run: |
           git config pull.rebase false
@@ -55,7 +54,6 @@ jobs:
 
       - name: Push changes (if required)
         uses: ad-m/github-push-action@master
-        if: steps.runBot.outputs.runStatus == 'true'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
