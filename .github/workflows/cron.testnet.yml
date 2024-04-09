@@ -34,13 +34,14 @@ jobs:
 
       - name: Get current date
         id: date
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+        run: echo "date=$(date +'%Y-%m-%d')" >> "$GITHUB_ENV"
 
       - name: Run bot
         id: runBot
         run: |
           npm install
-          npx tsx index.ts | tee log-${{ steps.date.outputs.date }}.txt
+          printf '%s\n' "$date"
+          npx tsx index.ts | tee log-"$date".txt
 
       - name: Commit Logs
         continue-on-error: true
