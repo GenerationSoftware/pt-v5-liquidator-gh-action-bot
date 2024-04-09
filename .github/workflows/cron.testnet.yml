@@ -32,46 +32,44 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+
       - name: Run bot
         id: runBot
         run: |
           npm install
-          npx tsx index.ts | tee out.log
-          cat out.log
-          cat out.log
-          cat out.log
+          npx tsx index.ts | tee log-${{ steps.date.outputs.date }}.txt
 
-      # 7. Commit
-      # - name: Commit Optimism Sepolia
-      #   if: steps.vaultAccountsOptimismSepolia.outputs.runStatus == 'true'
-      #   continue-on-error: true
-      #   run: |
-      #     git config pull.rebase false
-      #     git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-      #     git config --local user.name "github-actions[bot]"
-      #     git pull
-      #     git add ./winners
-      #     git commit -m "Add testnet winner results for Optimism Sepolia draw #${{steps.vaultAccountsOptimismSepolia.outputs.drawId}}"
+      - name: Commit Logs
+        if: steps.runBot.outputs.runStatus == 'true'
+        continue-on-error: true
+        run: |
+          git config pull.rebase false
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git pull
+          git add *.log
+          git commit -m "Add log for Liquidator bot run on Optimism Sepolia"
 
-      # 8. Push
-      # - name: Push changes (if required)
-      #   uses: ad-m/github-push-action@master
-      #   if: steps.vaultAccountsOptimismSepolia.outputs.runStatus == 'true'
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     branch: ${{ github.ref }}
-      #     force: true
+      - name: Push changes (if required)
+        uses: ad-m/github-push-action@master
+        if: steps.runBot.outputs.runStatus == 'true'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+          force: true
 
-      # Optionally:
-      # - name: Comment Error
-      #   id: commentError
-      #   if: steps.vaultAccountsOptimismSepolia.outputs.exitcode == 1
-      #   uses: actions/github-script@v5
-      #   continue-on-error: true
-      #   with:
-      #     script: |
-      #       await github.rest.issues.create({
-      #         owner: context.repo.owner,
-      #         repo: context.repo.repo,
-      #         title: `Draw #${{steps.vaultAccountsOptimismSepolia.outputs.drawId}} Winner Calc Failed: Exit Code 1`
-      #       })
+      - name: Comment Error
+        id: commentError
+        if: steps.runBot.outputs.exitcode == 1
+        uses: actions/github-script@v5
+        continue-on-error: true
+        with:
+          script: |
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Liquidator bot failed: Exit Code 1`
+            })
