@@ -51,7 +51,7 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git pull
           git add logs/*
-          git commit -m "Add log for Liquidator bot run on Optimism Sepolia"
+          git commit -m "Add "$date".log for Liquidator bot run on Optimism Sepolia"
 
       - name: Push changes (if required)
         uses: ad-m/github-push-action@master
@@ -70,5 +70,5 @@ jobs:
             await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: `Liquidator bot failed: Exit Code 1`
+              title: `Liquidator bot failed for run at "$date": Exit Code 1`
             })
