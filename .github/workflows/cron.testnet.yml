@@ -1,7 +1,7 @@
 name: CronJob
 on:
   schedule:
-    - cron: "*/3 * * * *" # ie. 4:03pm, 4:06pm, 4:09pm ... etc.
+    - cron: "*/5 * * * *" # ie. 4:00pm, 4:05pm, 4:10pm ... etc.
   push:
 env:
   CHAIN_ID: 11155420
