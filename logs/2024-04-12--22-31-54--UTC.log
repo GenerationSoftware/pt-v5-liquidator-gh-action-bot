@@ -1,0 +1,6 @@
+Operating on: 11155420 - Optimism Sepolia
+
+Config - SWAP_RECIPIENT not provided, setting swap recipient to relayer address: 0x06003274c3a7926c04cA8d6903cc691fE8f3CEC2
+Config - MIN_PROFIT_THRESHOLD_USD: 0.1
+
+Starting ...
