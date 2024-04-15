@@ -17,7 +17,7 @@ You can simply fork this repo, enter your own custom environment variables in yo
 
 1. [Fork this repository](#user-content-1-fork-this-repository)
 2. [Set your environment variables](#user-content-2-set-your-environment-variables)
-3. [Enabled automated workflows](#user-content-3-enable-automated-workflows)
+3. [Enable automated workflows](#user-content-3-enable-automated-workflows)
 4. [View logs](#user-content-4-view-logs)
 5. [(Optional) Change Chain or Reward Recipient](#user-content-5-optional-change-chain-or-reward-recipient)
 
@@ -40,43 +40,51 @@ Start by forking this bot to your own new repository - this essentially deploys 
 
 #### 2. Set your environment variables
 
-Once the repository has been forked you can update your `Secrets` (under `Settings`) to point to your own API keys. Each bot requires 2 secrets: a private key which will send transactions on your bot's behalf, and a RPC URI such as one from Infura or Alchemy.
-
-`CUSTOM_RELAYER_PRIVATE_KEY`: We recommend creating a brand new EVM account and only sending a small amount of ETH (less than $100) to it for relaying your bot transactions. In the rare case that the account gets compromised you will only lose whatever ETH is currently in it.
-
-`JSON_RPC_URI`: By default, this bot uses Optimism Sepolia - an Optimism testnet. If you are using a different chain (such as Optimism mainnet) the bot will require a `JSON_RPC_URI` that points to that chain.
-
-`COVALENT_API_KEY` (optional): There is 1 optional secret: a Covalent API key to assist the bot in looking up the dollar value of tokens.
+Once the repository has been forked you can update your `Secrets` (under `Settings`) to point to your own API keys. Each bot requires 2 secrets: a private key which will send transactions on your bot's behalf, and a RPC URI such as one from [Infura](https://www.infura.io/) or [Alchemy](https://www.alchemy.com/).
 
 > <kbd><img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/screenshot-settings-1.jpg?raw=true" /></kbd>
 
+
 > <kbd><img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/screenshot-settings-2-jsonrpc.jpg?raw=true" /></kbd>
 
-> <kbd><img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/screenshot-settings-3-covalent-api.jpg?raw=true" /></kbd>
+`JSON_RPC_URI`: By default, this bot uses Optimism Sepolia - an Optimism testnet. If you are using a different chain (such as Optimism mainnet) the bot will require a `JSON_RPC_URI` that points to that chain.
 
 > <kbd>
 <img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/screenshot-settings-4-privkey.jpg?raw=true" />
 </kbd>
+
+`CUSTOM_RELAYER_PRIVATE_KEY`: We recommend creating a brand new EVM account and only sending a small amount of ETH (less than $100) to it for relaying your bot transactions. In the rare case that the account gets compromised you will only lose whatever ETH is currently in it.
+
+> <kbd><img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/screenshot-settings-3-covalent-api.jpg?raw=true" /></kbd>
+
+`COVALENT_API_KEY` (optional): There is 1 optional secret: a Covalent API key to assist the bot in looking up the dollar value of tokens.
 
 > <kbd><img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/screenshot-settings-5-some.jpg?raw=true" /></kbd>
 
 
 #### 3. Enable automated workflows
 
-By default, GitHub does not enable automatd workflows for newly forked repositories. Navigate to the `Actions` tab to enable workflows on your newly forked repository:
+By default, GitHub does not enable automated workflows for newly forked repositories. Navigate to the `Actions` tab to enable workflows on your newly forked repository:
 
 > <kbd><img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/screenshot-actions-0-nothing.jpg?raw=true" /></kbd>
 
+Click 'I understand my workflows, go ahead and enable them'
+
 > <kbd><img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/screenshot-actions-2-disabled.jpg?raw=true" /></kbd>
+
+**Important!** Click the little 'Enable workflow' button in the top-right corner
 
 > <kbd><img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/screenshot-actions-3-enabled.jpg?raw=true" /></kbd>
 
+You should see the success message above.
 
 #### 4. View logs
 
 To see if the bot is working correctly, check the logs under `Actions`. **You may need to wait 5 - 10 minutes** for the first scheduled task to show up. Following that, the bot will attempt to run every 5 minutes. However, GitHub may throttle the amount of runs based on how overloaded GitHub Actions is at that time.
 
 > <kbd><img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/screenshot-actions-4-logs.jpg?raw=true" /></kbd>
+
+Click the name of the run to see the logs. For instance, one of my runs is simply named "Cronjob". I can open that up, then click on the "Run bot" line to see the outcome of the bot.
 
 #### 5. (Optional) Change Chain or Reward Recipient:
 
