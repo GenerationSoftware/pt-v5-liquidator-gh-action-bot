@@ -1,5 +1,5 @@
 {
-    "include": ["utils"],
+    "include": [],
     "exclude": ["node_modules"],
     "compilerOptions": {
       "baseUrl": ".",
