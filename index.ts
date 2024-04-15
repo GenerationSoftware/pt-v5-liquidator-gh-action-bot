@@ -1,4 +1,3 @@
-import nodeFetch from "node-fetch";
 import { BaseProvider } from "@ethersproject/providers";
 import {
   downloadContractsBlob,
@@ -30,12 +29,12 @@ const main = async () => {
     chainId: envVars.CHAIN_ID,
     swapRecipient: envVars.SWAP_RECIPIENT,
     minProfitThresholdUsd: Number(envVars.MIN_PROFIT_THRESHOLD_USD),
+    envTokenAllowList: envVars.ENV_TOKEN_ALLOW_LIST,
   };
 
   try {
     const contracts: ContractsBlob = await downloadContractsBlob(
-      config.chainId,
-      nodeFetch
+      config.chainId
     );
     await runLiquidator(contracts, config);
   } catch (error) {
