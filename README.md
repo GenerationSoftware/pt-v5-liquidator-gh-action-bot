@@ -29,13 +29,14 @@ You can simply fork this repo, enter your own custom environment variables in yo
 
 Start by forking this bot to your own new repository - this essentially deploys your very own copy of the bot. You can give it a custom name if you like:
 
+> <kbd><img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/screenshot-forking-0.jpg?raw=true" /></kbd>
+
+> <kbd><img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/screenshot-forking-1.jpg?raw=true" /></kbd>
+
 [<img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/one-click-deploy@2x.png?raw=true" width="169" height="37"/>](https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/fork "one click deploy button")
 
 [Fork / deploy this bot](https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/fork)
 
-> <kbd><img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/screenshot-forking-0.jpg?raw=true" /></kbd>
-
-> <kbd><img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/screenshot-forking-1.jpg?raw=true" /></kbd>
 
 #### 2. Set your environment variables
 
