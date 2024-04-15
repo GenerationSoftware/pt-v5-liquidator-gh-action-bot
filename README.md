@@ -6,7 +6,7 @@ You can simply fork this repo, enter your own custom environment variables in yo
 
 **Note**: You require your own GitHub account to fork this repository and run the GitHub Actions.
 
-[<img src="/images/one-click-deploy@2x.png?raw=true" width="169" height="37"/>](../../pt-v5-liquidator-gh-action-bot/fork "one click deploy button")
+[<img src="/images/one-click-deploy@2x.png?raw=true" width="169" height="37"/>](https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/fork "one click deploy button")
 
 
 [Fork / deploy this bot](https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/fork)
@@ -81,7 +81,7 @@ To see if the bot is working correctly, check the logs under `Actions`. **You ma
 
 In the [.github/workflows/cron.yml](/.github/workflows/cron.yml) file you can update the following variables: `CHAIN_ID`, `MIN_PROFIT_THRESHOLD_USD`, and/or `SWAP_RECIPIENT`. This will allow you to change which chain you are running the bot against, how much profit you want to make per transaction, and who (which EVM EOA account) receives the profits earned.
 
-`CHAIN_ID`: Simply the chain ID. You can find most chain ID's on [https://chainlist.org/](https://chainlist.org/)
-`MIN_PROFIT_THRESHOLD_USD`: This is in $USD, so 0.1 would be $0.10 per transaction
-`SWAP_RECIPIENT`: Any typical account address, if left blank this will default to the relayer account set by the `CUSTOM_RELAYER_PRIVATE_KEY` variable.
+###### `CHAIN_ID`: Simply the chain ID. You can find most chain ID's on [https://chainlist.org/](https://chainlist.org/)
+###### `MIN_PROFIT_THRESHOLD_USD`: This is in $USD, so 0.1 would be $0.10 per transaction
+###### `SWAP_RECIPIENT`: Any typical account address, if left blank this will default to the relayer account set by the `CUSTOM_RELAYER_PRIVATE_KEY` variable.
 
