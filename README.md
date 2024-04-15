@@ -6,7 +6,7 @@ You can simply fork this repo, enter your own custom environment variables in yo
 
 **Note**: You require your own GitHub account to fork this repository and run the GitHub Actions.
 
-[<img src="/images/one-click-deploy@2x.png?raw=true" width="169" height="37"/>](/pt-v5-liquidator-gh-action-bot/fork "one click deploy button")
+[<img src="/images/one-click-deploy@2x.png?raw=true" width="169" height="37"/>](../../pt-v5-liquidator-gh-action-bot/fork "one click deploy button")
 
 
 [Fork / deploy this bot](https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/fork)
