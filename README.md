@@ -40,9 +40,11 @@ Once the repository has been forked you can update your `Secrets` (under `Settin
 
 <img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/screenshot-settings-2-jsonrpc.jpg?raw=true" />
 
-<img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/screenshot-settings-3-covalent-api.jpg?raw=true" />
+> <img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/screenshot-settings-3-covalent-api.jpg?raw=true" />
 
+<kbd>
 <img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/screenshot-settings-4-privkey.jpg?raw=true" />
+</kbd>
 
 <img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/screenshot-settings-5-some.jpg?raw=true" />
 
