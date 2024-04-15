@@ -1,6 +1,6 @@
 # PoolTogether v5 Liquidator Bot (GitHub Actions)
 
-This repo contains two simple scripts ([index.ts](https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/index.ts) and [.github/workflows/cron.testnet.yml](https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/.github/workflows/cron.testnet.yml)) to run the Generation Software PoolTogether v5 Liquidator bot using GitHub Actions.
+This repo contains two simple scripts ([index.ts](https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/index.ts) and [.github/workflows/cron.yml](https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/.github/workflows/cron.yml)) to run the Generation Software PoolTogether v5 Liquidator bot using GitHub Actions.
 
 You can simply fork this repo, enter your own custom environment variables in your newly-forked GitHub Repository's Settings (`Settings` -> `Secrets and variables` -> `Actions` -> `New repository secret`), and enable automated workflow runs.
 
@@ -14,7 +14,11 @@ You can simply fork this repo, enter your own custom environment variables in yo
 
 ### Installation:
 
-
+1. [Fork this repository](#user-content-1-fork-this-repository)
+2. [Set your environment variables](#user-content-2-set-your-environment-variables)
+3. [Enabled automated workflows](#user-content-3-enable-automated-workflows)
+4. [View logs](#user-content-4-view-logs)
+5. [(Optional) Change Chain or Reward Recipient](#user-content-5-optional-change-chain-or-reward-recipient)
 
 [Watch the video](https://www.youtube.com/)
 
@@ -70,9 +74,11 @@ To see if the bot is working correctly, check the logs under `Actions`. **You ma
 
 > <kbd><img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/screenshot-actions-4-logs.jpg?raw=true" /></kbd>
 
-###### 5. (Optional) Update `CHAIN_ID`, `MIN_PROFIT_THRESHOLD_USD`, and/or `SWAP_RECIPIENT`:
+###### 5. (Optional) Change Chain or Reward Recipient:
 
-CHAIN_ID: 11155420
-MIN_PROFIT_THRESHOLD_USD: 0.1
-SWAP_RECIPIENT: ''
+In the [.github/workflows/cron.yml](/.github/workflows/cron.yml) file you can update the following variables: `CHAIN_ID`, `MIN_PROFIT_THRESHOLD_USD`, and/or `SWAP_RECIPIENT`. This will allow you to change which chain you are running the bot against, how much profit you want to make per transaction, and who (which EVM EOA account) receives the profits earned.
+
+`CHAIN_ID`: Simply the chain ID. You can find most chain ID's on [https://chainlist.org/](https://chainlist.org/)
+`MIN_PROFIT_THRESHOLD_USD`: This is in $USD, so 0.1 would be $0.10 per transaction
+`SWAP_RECIPIENT`: Any typical account address, if left blank this will default to the relayer account set by the `CUSTOM_RELAYER_PRIVATE_KEY` variable.
 
