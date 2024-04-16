@@ -15,13 +15,15 @@ You can simply fork this repo, enter your own custom environment variables in yo
 
 ### Installation:
 
+[Watch the 1-minute video](https://www.youtube.com/watch?v=RmJySyZsHNc), or:
+
 1. [Fork this repository](#user-content-1-fork-this-repository)
 2. [Set your environment variables](#user-content-2-set-your-environment-variables)
 3. [Enable automated workflows](#user-content-3-enable-automated-workflows)
 4. [View logs](#user-content-4-view-logs)
 5. [(Optional) Change Chain or Reward Recipient](#user-content-5-optional-change-chain-or-reward-recipient)
 
-[Watch the video](https://www.youtube.com/)
+
 
 ---
 
