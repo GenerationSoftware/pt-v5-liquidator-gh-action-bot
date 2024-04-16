@@ -15,7 +15,9 @@ You can simply fork this repo, enter your own custom environment variables in yo
 
 ### Installation:
 
-[<img src="https://i.ytimg.com/vi/RmJySyZsHNc/maxresdefault.jpg" width="50%">](https://www.youtube.com/watch?v=RmJySyZsHNc "Watch the 1-minute installation video")
+[<img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/video-thumb.jpg" width="50%">](https://www.youtube.com/watch?v=RmJySyZsHNc "Watch the 1-minute installation video")
+
+[Watch the 1-minute video](https://www.youtube.com/watch?v=RmJySyZsHNc), or:
 
 1. [Fork this repository](#user-content-1-fork-this-repository)
 2. [Set your environment variables](#user-content-2-set-your-environment-variables)
