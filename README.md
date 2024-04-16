@@ -15,7 +15,7 @@ You can simply fork this repo, enter your own custom environment variables in yo
 
 ### Installation:
 
-[Watch the 1-minute video](https://www.youtube.com/watch?v=RmJySyZsHNc), or:
+[<img src="https://i.ytimg.com/vi/RmJySyZsHNc/maxresdefault.jpg" width="50%">](https://www.youtube.com/watch?v=RmJySyZsHNc "Watch the 1-minute installation video")
 
 1. [Fork this repository](#user-content-1-fork-this-repository)
 2. [Set your environment variables](#user-content-2-set-your-environment-variables)
