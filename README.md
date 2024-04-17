@@ -8,7 +8,6 @@ You can simply fork this repo, enter your own custom environment variables in yo
 
 [<img src="/images/one-click-deploy@2x.png?raw=true" width="169" height="37"/>](https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/fork "one click deploy button")
 
-
 [Fork / deploy this bot](https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/fork)
 
 ---
@@ -24,6 +23,8 @@ You can simply fork this repo, enter your own custom environment variables in yo
 3. [Enable automated workflows](#user-content-3-enable-automated-workflows)
 4. [View logs](#user-content-4-view-logs)
 5. [(Optional) Change Chain or Reward Recipient](#user-content-5-optional-change-chain-or-reward-recipient)
+
+**Note**: This process is essentially the same for the [Prize Claimer](https://github.com/GenerationSoftware/pt-v5-prize-claimer-gh-action-bot/) and [Draw Auction](https://github.com/GenerationSoftware/pt-v5-draw-auction-gh-action-bot) bots as well.
 
 
 
@@ -98,3 +99,8 @@ In the [.github/workflows/cron.yml](/.github/workflows/cron.yml) file you can up
 ###### `MIN_PROFIT_THRESHOLD_USD`: This is in $USD, so 0.1 would be $0.10 per transaction
 ###### `SWAP_RECIPIENT`: Any typical account address, if left blank this will default to the relayer account set by the `CUSTOM_RELAYER_PRIVATE_KEY` variable.
 
+
+
+## Lastly:
+
+The Liquidator bot's relayer account needs to be stocked with ETH (to pay gas fees for transactions) and WETH to liquidate. We recommend keeping less than $100 in value on the relayer at a time in case your private key were to get compromised.
