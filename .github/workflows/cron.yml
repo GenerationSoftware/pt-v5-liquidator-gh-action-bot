@@ -4,7 +4,7 @@ on:
     - cron: "*/5 * * * *" # ie. 4:00pm, 4:05pm, 4:10pm ... etc.
   push:
 env:
-  CHAIN_ID: 11155420
+  CHAIN_ID: 10
   MIN_PROFIT_THRESHOLD_USD: 0.1
   SWAP_RECIPIENT: ''
   JSON_RPC_URI: ${{ secrets.JSON_RPC_URI }}
