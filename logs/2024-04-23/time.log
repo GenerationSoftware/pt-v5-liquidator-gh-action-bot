@@ -35,8 +35,8 @@ tokenOut is in the allow list! 👍
 
 1. Amounts:
 
-Max amount out available: 12.103091 przUSDC (12103091 wei)
-Amount in: 0.019056888419601492 WETH (19056888419601492 wei)
+Max amount out available: 12.119735 przUSDC (12119735 wei)
+Amount in: 0.018954464422404772 WETH (18954464422404772 wei)
 
 ******************
 2. Balance & Allowance
@@ -56,23 +56,23 @@ Estimated gas limit (wei): 0.000000000000295431 ETH (295431 wei)
 ┌───────────┬──────────────────────┐
 │ (index)   │ Values               │
 ├───────────┼──────────────────────┤
-│ avgFeeUsd │ 0.058842764946164375 │
+│ avgFeeUsd │ 0.058074455618723445 │
 └───────────┴──────────────────────┘
 
 ******************
 5. Profit/Loss (USD):
 
 Gross profit = tokenOut - tokenIn
-$-49.47 = $12.11 - $61.58
+$-49.12 = $12.12 - $61.25
 
 Net profit = Gross profit - Gas fee (Average)
-$-49.53 = $-49.47 - $0.06
+$-49.18 = $-49.12 - $0.06
 
 ┌──────────────────────────┬───────────┐
 │ (index)                  │ Values    │
 ├──────────────────────────┼───────────┤
 │ MIN_PROFIT_THRESHOLD_USD │ '$0.1'    │
-│ Net profit (USD)         │ '$-49.53' │
+│ Net profit (USD)         │ '$-49.18' │
 │ Profitable?              │ '✗'       │
 └──────────────────────────┴───────────┘
 
@@ -105,8 +105,8 @@ tokenOut is in the allow list! 👍
 
 1. Amounts:
 
-Max amount out available: 0.00098067901205212 przWETH (980679012052120 wei)
-Amount in: 0.001910413083016484 WETH (1910413083016484 wei)
+Max amount out available: 0.00098177745867218 przWETH (981777458672180 wei)
+Amount in: 0.001904881560831584 WETH (1904881560831584 wei)
 
 ******************
 2. Balance & Allowance
@@ -126,23 +126,23 @@ Estimated gas limit (wei): 0.000000000000341142 ETH (341142 wei)
 ┌───────────┬─────────────────────┐
 │ (index)   │ Values              │
 ├───────────┼─────────────────────┤
-│ avgFeeUsd │ 0.06784654447936765 │
+│ avgFeeUsd │ 0.06795598696825565 │
 └───────────┴─────────────────────┘
 
 ******************
 5. Profit/Loss (USD):
 
 Gross profit = tokenOut - tokenIn
-$-3 = $3.17 - $6.17
+$-2.98 = $3.17 - $6.16
 
 Net profit = Gross profit - Gas fee (Average)
-$-3.07 = $-3 - $0.07
+$-3.05 = $-2.98 - $0.07
 
 ┌──────────────────────────┬──────────┐
 │ (index)                  │ Values   │
 ├──────────────────────────┼──────────┤
 │ MIN_PROFIT_THRESHOLD_USD │ '$0.1'   │
-│ Net profit (USD)         │ '$-3.07' │
+│ Net profit (USD)         │ '$-3.05' │
 │ Profitable?              │ '✗'      │
 └──────────────────────────┴──────────┘
 
@@ -175,8 +175,8 @@ tokenOut is in the allow list! 👍
 
 1. Amounts:
 
-Max amount out available: 6.964210413806955138 przLUSD (6964210413806955138 wei)
-Amount in: 0.002798936034661302 WETH (2798936034661302 wei)
+Max amount out available: 6.971200769547440264 przLUSD (6971200769547440264 wei)
+Amount in: 0.002792754638825036 WETH (2792754638825036 wei)
 
 ******************
 2. Balance & Allowance
@@ -193,26 +193,26 @@ Sufficient allowance ✔
 Native (Gas) Token ETH Market Rate (USD): $3234.57
 Estimated gas limit (wei): 0.000000000000287251 ETH (287251 wei)
 
-┌───────────┬──────────────────────┐
-│ (index)   │ Values               │
-├───────────┼──────────────────────┤
-│ avgFeeUsd │ 0.057157632052829595 │
-└───────────┴──────────────────────┘
+┌───────────┬─────────────────────┐
+│ (index)   │ Values              │
+├───────────┼─────────────────────┤
+│ avgFeeUsd │ 0.05717424083450039 │
+└───────────┴─────────────────────┘
 
 ******************
 5. Profit/Loss (USD):
 
 Gross profit = tokenOut - tokenIn
-$-2.08 = $6.97 - $9.04
+$-2.05 = $6.97 - $9.02
 
 Net profit = Gross profit - Gas fee (Average)
-$-2.14 = $-2.08 - $0.06
+$-2.11 = $-2.05 - $0.06
 
 ┌──────────────────────────┬──────────┐
 │ (index)                  │ Values   │
 ├──────────────────────────┼──────────┤
 │ MIN_PROFIT_THRESHOLD_USD │ '$0.1'   │
-│ Net profit (USD)         │ '$-2.14' │
+│ Net profit (USD)         │ '$-2.11' │
 │ Profitable?              │ '✗'      │
 └──────────────────────────┴──────────┘
 
@@ -245,15 +245,15 @@ tokenOut is in the allow list! 👍
 
 1. Amounts:
 
-Max amount out available: 10.96192323640849465 przDAI (10961923236408494650 wei)
-Amount in: 0.052743222058252422 WETH (52743222058252422 wei)
+Max amount out available: 10.983106658157060818 przDAI (10983106658157060818 wei)
+Amount in: 0.051881404704359408 WETH (51881404704359408 wei)
 
 ******************
 2. Balance & Allowance
 
 Checking relayer 'tokenIn' balance ...
 Insufficient balance ✗
-Increase relayer '0xf9A3856b5368f60f2837c797A993F46C6ea7117d' WETH balance by 0.008855994917172238
+Increase relayer '0xf9A3856b5368f60f2837c797A993F46C6ea7117d' WETH balance by 0.007994177563279224
 
 
 
@@ -366,14 +366,6 @@ LiquidationPair #9
 LiquidationPair Address: 0xBA8b3942F1A2149E571032AE33430f5746Bd9771
 
 Unable to fetch current USD value from Covalent of token: '0x71d53B5B7141E1ec9A3Fc9Cc48b4766102d14A4A', missing lookup contract address on ETH mainnet.
-Unable to fetch current USD value from Coingecko of 'vAMMV2-USDC/SNX' token.
-Error: Too Many Requests
-    at getCoingeckoMarketRateUsd (/home/runner/work/pt-v5-liquidator-gh-action-bot/pt-v5-liquidator-gh-action-bot/node_modules/@generationsoftware/pt-v5-autotasks-library/src/utils/getUsd.ts:162:13)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at getEthMainnetTokenMarketRateUsd (/home/runner/work/pt-v5-liquidator-gh-action-bot/pt-v5-liquidator-gh-action-bot/node_modules/@generationsoftware/pt-v5-autotasks-library/src/utils/getUsd.ts:140:23)
-    at getLiquidatorContextMulticall (/home/runner/work/pt-v5-liquidator-gh-action-bot/pt-v5-liquidator-gh-action-bot/node_modules/@generationsoftware/pt-v5-autotasks-library/src/utils/getLiquidatorContextMulticall.ts:118:39)
-    at runLiquidator (/home/runner/work/pt-v5-liquidator-gh-action-bot/pt-v5-liquidator-gh-action-bot/node_modules/@generationsoftware/pt-v5-autotasks-library/src/liquidator.ts:110:40)
-    at main (/home/runner/work/pt-v5-liquidator-gh-action-bot/pt-v5-liquidator-gh-action-bot/index.ts:39:5)
 
 ******************
 Liquidation Pair: WETH/przvAMMV2-USDCe/SNX
@@ -429,7 +421,7 @@ tokenOut is in the allow list! 👍
 
 1. Amounts:
 
-Max amount out available: 3.882975455766493436 OP (3882975455766493436 wei)
+Max amount out available: 3.890361155030815837 OP (3890361155030815837 wei)
 
 
 
