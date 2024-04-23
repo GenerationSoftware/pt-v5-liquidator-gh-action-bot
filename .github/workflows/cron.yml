@@ -45,20 +45,7 @@ jobs:
         id: runBot
         run: |
           npm install
-          printf '%s\n' "$date"
-          printf '%s\n' "$time"
-          printf '%s\n' "storing log in logs/"$date"/"$time".log"
-          mkdir -p logs/"$date" && npx tsx index.ts | tee logs/"$date"/"$time".log
-
-      - name: Commit Logs
-        continue-on-error: true
-        run: |
-          git config pull.rebase false
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git pull
-          git add logs/*
-          git commit -m "Add "$date".log for Liquidator bot run on Optimism Sepolia"
+          npx tsx index.ts
 
       - name: Push changes (if required)
         uses: ad-m/github-push-action@master
@@ -77,5 +64,5 @@ jobs:
             await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: `Liquidator bot failed for run at "$date": Exit Code 1`
+              title: `Liquidator bot failed for run at "$date"__"$time": Exit Code 1`
             })
