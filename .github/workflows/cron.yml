@@ -39,7 +39,7 @@ jobs:
       
       - name: Store current time
         id: time
-        run: echo "time=$(date +'%H-%M-%S--%Z')" >> "$GITHUB_ENV"
+        run: echo "time=$(date +'%H-%M-%S_%Z')" >> "$GITHUB_ENV"
 
       - name: Run bot
         id: runBot
@@ -47,7 +47,8 @@ jobs:
           npm install
           printf '%s\n' "$date"
           printf '%s\n' "$time"
-          mkdir -p logs/"$date" && npx tsx index.ts | tee logs/"$date"/"time".log
+          printf '%s\n' "storing log in logs/"$date"/"$time".log"
+          mkdir -p logs/"$date" && npx tsx index.ts | tee logs/"$date"/"$time".log
 
       - name: Commit Logs
         continue-on-error: true
