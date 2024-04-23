@@ -39,7 +39,7 @@ jobs:
       
       - name: Store current time
         id: time
-        run: echo "time=$(time +'%H-%M-%S--%Z')" >> "$GITHUB_ENV"
+        run: echo "time=$(date +'%H-%M-%S--%Z')" >> "$GITHUB_ENV"
 
       - name: Run bot
         id: runBot
