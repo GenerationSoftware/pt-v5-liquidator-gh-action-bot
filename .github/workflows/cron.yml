@@ -33,16 +33,21 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
-      - name: Get current date
+      - name: Store current date
         id: date
-        run: echo "date=$(date +'%Y-%m-%d--%H-%M-%S--%Z')" >> "$GITHUB_ENV"
+        run: echo "date=$(date +'%Y-%m-%d')" >> "$GITHUB_ENV"
+      
+      - name: Store current time
+        id: time
+        run: echo "time=$(time +'%H-%M-%S--%Z')" >> "$GITHUB_ENV"
 
       - name: Run bot
         id: runBot
         run: |
           npm install
           printf '%s\n' "$date"
-          mkdir -p logs && npx tsx index.ts | tee logs/"$date".log
+          printf '%s\n' "$time"
+          mkdir -p logs/"$date" && npx tsx index.ts | tee logs/"$date"/"time".log
 
       - name: Commit Logs
         continue-on-error: true
