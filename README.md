@@ -52,7 +52,7 @@ Once the repository has been forked you can update your `Secrets` (under `Settin
 
 > <kbd><img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/screenshot-settings-2-jsonrpc.jpg?raw=true" /></kbd>
 
-`JSON_RPC_URI`: By default, this bot uses Optimism Sepolia - an Optimism testnet. If you are using a different chain (such as Optimism mainnet) the bot will require a `JSON_RPC_URI` that points to that chain. (Make sure this is the full URL (not just an API key) and is "JSON_RPC_URI", not "JSON_RPC_URL" with an "L" 🙂).
+`JSON_RPC_URI`: By default, this bot uses Optimism mainnet. If you are using a different chain (such as Optimism mainnet) the bot will require a `JSON_RPC_URI` that points to that chain. (Make sure this is the full URL (not just an API key) and is "JSON_RPC_URI", not "JSON_RPC_URL" with an "L" 🙂).
 
 > <kbd>
 <img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/screenshot-settings-4-privkey.jpg?raw=true" />
