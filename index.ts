@@ -30,16 +30,13 @@ const main = async () => {
     swapRecipient: envVars.SWAP_RECIPIENT,
     minProfitThresholdUsd: Number(envVars.MIN_PROFIT_THRESHOLD_USD),
     envTokenAllowList: envVars.ENV_TOKEN_ALLOW_LIST,
+    contractJsonUrl: envVars.CONTRACT_JSON_URL,
   };
 
-  try {
-    const contracts: ContractsBlob = await downloadContractsBlob(
-      config.chainId
-    );
-    await runLiquidator(contracts, config);
-  } catch (error) {
-    throw new Error(error);
-  }
+  const contracts: ContractsBlob = await downloadContractsBlob(
+    config.contractJsonUrl
+  );
+  await runLiquidator(contracts, config);
 };
 
 main();
