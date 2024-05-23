@@ -1,7 +1,7 @@
 name: CronJob - Liquidator Bot - Optimism
 on:
   schedule:
-    - cron: "3 */1 * * *" # ie. 4:03pm, 5:03pm, 6:03pm ... etc.
+    - cron: "*/5 * * * *" # ie. 4:05pm, 4:10pm, 4:15pm ... etc.
   push:
 env:
   CHAIN_ID: 10
