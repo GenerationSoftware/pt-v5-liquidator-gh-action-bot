@@ -1,16 +1,16 @@
-name: CronJob - Liquidator Bot - Optimism
+name: CronJob - Liquidator Bot - Base
 on:
   schedule:
     - cron: "*/5 * * * *" # ie. 4:05pm, 4:10pm, 4:15pm ... etc.
   push:
 env:
-  CHAIN_ID: 10
+  CHAIN_ID: 8453
   MIN_PROFIT_THRESHOLD_USD: 0.1
   SWAP_RECIPIENT: ''
-  JSON_RPC_URL: ${{ secrets.JSON_RPC_URL }}
+  JSON_RPC_URL: ${{ secrets.BASE_MAINNET_JSON_RPC_URL }}
   COVALENT_API_KEY: ${{ secrets.COVALENT_API_KEY }}
   CUSTOM_RELAYER_PRIVATE_KEY: ${{ secrets.CUSTOM_RELAYER_PRIVATE_KEY }}
-  CONTRACT_JSON_URL: 'https://raw.githubusercontent.com/GenerationSoftware/pt-v5-mainnet/396f04daedc5a38935460ddf47d2f10e9ac1fec6/deployments/optimism/contracts.json'
+  CONTRACT_JSON_URL: 'https://raw.githubusercontent.com/GenerationSoftware/pt-v5-mainnet/bc84c3f5e1d9703372ae7f9baf584bab42f47b27/deployments/base/contracts.json'
   ENV_TOKEN_ALLOW_LIST: ''
   NODE_OPTIONS: "--max_old_space_size=32768"
 permissions: write-all
