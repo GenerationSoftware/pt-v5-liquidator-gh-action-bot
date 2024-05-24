@@ -5,13 +5,13 @@ on:
   push:
 env:
   CHAIN_ID: 8453
-  MIN_PROFIT_THRESHOLD_USD: 0.1
+  MIN_PROFIT_THRESHOLD_USD: 0.01
   SWAP_RECIPIENT: ''
   JSON_RPC_URL: ${{ secrets.BASE_MAINNET_JSON_RPC_URL }}
   COVALENT_API_KEY: ${{ secrets.COVALENT_API_KEY }}
   CUSTOM_RELAYER_PRIVATE_KEY: ${{ secrets.CUSTOM_RELAYER_PRIVATE_KEY }}
   CONTRACT_JSON_URL: 'https://raw.githubusercontent.com/GenerationSoftware/pt-v5-mainnet/bc84c3f5e1d9703372ae7f9baf584bab42f47b27/deployments/base/contracts.json'
-  ENV_TOKEN_ALLOW_LIST: ''
+  ENV_TOKEN_ALLOW_LIST: '0x8d1322cabe5ef2949f6bf4941cc7765187c1091a'
   NODE_OPTIONS: "--max_old_space_size=32768"
 permissions: write-all
 jobs:
