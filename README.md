@@ -62,7 +62,7 @@ Once the repository has been forked you can update your `Secrets` (under `Settin
 
 > <kbd><img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/screenshot-settings-3-covalent-api.jpg?raw=true" /></kbd>
 
-`COVALENT_API_KEY` (optional): There is 1 optional secret: a Covalent API key to assist the bot in looking up the dollar value of tokens.
+`COVALENT_API_KEY`: a Covalent API key is needed to assist the bot in looking up dollar values of tokens. You can register for a free API key here: [https://www.covalenthq.com/platform/auth/register/](https://www.covalenthq.com/platform/auth/register/)
 
 > <kbd><img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/screenshot-settings-5-some.jpg?raw=true" /></kbd>
 
