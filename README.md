@@ -91,7 +91,7 @@ To see if the bot is working correctly, check the logs under `Actions`. **You ma
 
 Click the name of the run to see the logs. For instance, one of my runs is simply named "Cronjob". I can open that up, then click on the "Run bot" line to see the outcome of the bot.
 
-#### 5. (Optional) Change Chain or Reward Recipient:
+#### 5. (Optional) Change Chain, Minimum Profit Threshold (in USD$) or Reward Recipient:
 
 In the [.github/workflows/cron.yml](/.github/workflows/cron.yml) file you can update the following variables: `CHAIN_ID`, `MIN_PROFIT_THRESHOLD_USD`, and/or `SWAP_RECIPIENT`. This will allow you to change which chain you are running the bot against, how much profit you want to make per transaction, and who (which EVM EOA account) receives the profits earned.
 
