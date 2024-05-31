@@ -5,13 +5,13 @@ on:
   push:
 env:
   CHAIN_ID: 42161
-  MIN_PROFIT_THRESHOLD_USD: 0.1
+  MIN_PROFIT_THRESHOLD_USD: 0.01
   SWAP_RECIPIENT: ''
   JSON_RPC_URL: ${{ secrets.ARBITRUM_MAINNET_JSON_RPC_URL }}
   COVALENT_API_KEY: ${{ secrets.COVALENT_API_KEY }}
   CUSTOM_RELAYER_PRIVATE_KEY: ${{ secrets.CUSTOM_RELAYER_PRIVATE_KEY }}
   CONTRACT_JSON_URL: 'https://raw.githubusercontent.com/GenerationSoftware/pt-v5-mainnet/bc9e4b4c25a033ec3c1c2b89b62422399b7db2f6/deployments/arbitrum/contracts.json'
-  ENV_TOKEN_ALLOW_LIST: ''
+  ENV_TOKEN_ALLOW_LIST: '0x16a1c56e5f8f6864beca13c3b68ffcd33bc0ef60,0xebbbda6c80e6406224ed6b3bae40f7be01addd8e,0xfb44ca0bf22c0380d9e99760390d1fa60bc3e47e'
   NODE_OPTIONS: "--max_old_space_size=32768"
 permissions: write-all
 jobs:
