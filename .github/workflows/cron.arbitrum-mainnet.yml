@@ -11,7 +11,7 @@ env:
   COVALENT_API_KEY: ${{ secrets.COVALENT_API_KEY }}
   CUSTOM_RELAYER_PRIVATE_KEY: ${{ secrets.CUSTOM_RELAYER_PRIVATE_KEY }}
   CONTRACT_JSON_URL: 'https://raw.githubusercontent.com/GenerationSoftware/pt-v5-mainnet/bc9e4b4c25a033ec3c1c2b89b62422399b7db2f6/deployments/arbitrum/contracts.json'
-  ENV_TOKEN_ALLOW_LIST: ''
+  ENV_TOKEN_ALLOW_LIST: '0x8653084e01bd8c9e24b9a8feb2036251ee0c16a9'
   NODE_OPTIONS: "--max_old_space_size=32768"
 permissions: write-all
 jobs:
