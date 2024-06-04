@@ -15,7 +15,7 @@
         "start": "tsx index.ts"
     },
     "devDependencies": {
-        "@generationsoftware/pt-v5-autotasks-library": "1.2.4",
+        "@generationsoftware/pt-v5-autotasks-library": "1.2.5",
         "@generationsoftware/pt-v5-utils-js": "1.2.0",
         "@types/node": "^20.11.28",
         "chalk": "^5.3.0",
