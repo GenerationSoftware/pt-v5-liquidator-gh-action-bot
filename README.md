@@ -45,14 +45,14 @@ Start by forking this bot to your own new repository - this essentially deploys 
 
 #### 2. Set your environment variables
 
-Once the repository has been forked you can update your `Secrets` (under `Settings`) to point to your own API keys. Each bot requires 2 secrets: a private key which will send transactions on your bot's behalf, and a RPC URI such as one from [Infura](https://www.infura.io/) or [Alchemy](https://www.alchemy.com/).
+Once the repository has been forked you can update your `Secrets` (under `Settings`) to point to your own API keys. Each bot requires 2 secrets: a private key which will send transactions on your bot's behalf, and a RPC URL such as one from [Infura](https://www.infura.io/) or [Alchemy](https://www.alchemy.com/).
 
 > <kbd><img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/screenshot-settings-1.jpg?raw=true" /></kbd>
 
 
 > <kbd><img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/screenshot-settings-2-jsonrpc.jpg?raw=true" /></kbd>
 
-`JSON_RPC_URI`: By default, this bot uses Optimism mainnet. If you are using a different chain (such as Optimism mainnet) the bot will require a `JSON_RPC_URI` that points to that chain. (Make sure this is the full URL (not just an API key) and is "JSON_RPC_URI", not "JSON_RPC_URL" with an "L" 🙂).
+`JSON_RPC_URL`: We will need JSON_RPC_URLs for each network you want to use. The following are required for each network you want the bot to run against: `BASE_MAINNET_JSON_RPC_URL`, `ARBITRUM_MAINNET_JSON_RPC_URL`, `OPTIMISM_MAINNET_JSON_RPC_URL`.
 
 > <kbd>
 <img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/screenshot-settings-4-privkey.jpg?raw=true" />
