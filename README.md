@@ -8,7 +8,7 @@ You can simply fork this repo, enter your own custom environment variables in yo
 
 **Note**: You require your own GitHub account to fork this repository and run the GitHub Actions.
 
-[<img src="/images/one-click-deploy--new.jpg?raw=true" width="169" height="37"/>](https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/fork "one click deploy button")
+[<img src="/images/one-click-deploy@2x.png?raw=true" width="169" height="37"/>](https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/fork "one click deploy button")
 
 [Fork / deploy this bot](https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/fork)
 
@@ -16,7 +16,7 @@ You can simply fork this repo, enter your own custom environment variables in yo
 
 ### Installation:
 
-[<img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/video-thumb.jpg" width="50%">](https://www.youtube.com/watch?v=Dt-ibfZH-LU "Watch the 1-minute installation video")
+[<img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/video-thumb--new.jpg" width="50%">](https://www.youtube.com/watch?v=Dt-ibfZH-LU "Watch the 1-minute installation video")
 
 [Watch the 1-minute video](https://www.youtube.com/watch?v=Dt-ibfZH-LU), or:
 
