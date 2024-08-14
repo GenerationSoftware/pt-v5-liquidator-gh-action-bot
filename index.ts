@@ -30,6 +30,7 @@ const main = async () => {
     swapRecipient: envVars.SWAP_RECIPIENT,
     minProfitThresholdUsd: Number(envVars.MIN_PROFIT_THRESHOLD_USD),
     envTokenAllowList: envVars.ENV_TOKEN_ALLOW_LIST,
+    pairsToLiquidate: envVars.PAIRS_TO_LIQUIDATE,
     contractJsonUrl: envVars.CONTRACT_JSON_URL,
   };
 
