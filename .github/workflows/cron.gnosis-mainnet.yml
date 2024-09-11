@@ -1,0 +1,69 @@
+name: CronJob - Liquidator Bot - Gnosis
+on:
+  schedule:
+    - cron: "*/5 * * * *" # ie. 4:05pm, 4:10pm, 4:15pm ... etc.
+  push:
+env:
+  CHAIN_ID: 100
+  MIN_PROFIT_THRESHOLD_USD: 0.5
+  SWAP_RECIPIENT: ''
+  JSON_RPC_URL: ${{ secrets.GNOSIS_MAINNET_JSON_RPC_URL }}
+  COVALENT_API_KEY: ${{ secrets.COVALENT_API_KEY }}
+  CUSTOM_RELAYER_PRIVATE_KEY: ${{ secrets.CUSTOM_RELAYER_PRIVATE_KEY }}
+  CONTRACT_JSON_URL: 'https://raw.githubusercontent.com/GenerationSoftware/pt-v5-mainnet/196aa20f4a0b3e651d0504ffeb0e1b9a08c7ccb6/deployments/gnosis/contracts.json'
+  ENV_TOKEN_ALLOW_LIST: ''
+  NODE_OPTIONS: "--max_old_space_size=32768"
+permissions: write-all
+jobs:
+  runCLI:
+    name: Liquidator Bot
+    runs-on: ${{ matrix.os }}
+    strategy:
+      max-parallel: 1
+      matrix:
+        node: ["20.11.1"]
+        os: [ubuntu-latest]
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      
+      - name: Use Node ${{ matrix.node }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Store current date
+        id: date
+        run: echo "date=$(date +'%Y-%m-%d')" >> "$GITHUB_ENV"
+      
+      - name: Store current time
+        id: time
+        run: echo "time=$(date +'%H-%M-%S_%Z')" >> "$GITHUB_ENV"
+
+      - name: Run bot
+        id: runBot
+        run: |
+          npm install
+          npx tsx index.ts
+
+      - name: Push changes (if required)
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+          force: true
+
+      - name: Comment Error
+        id: commentError
+        if: steps.runBot.outputs.exitcode == 1
+        uses: actions/github-script@v5
+        continue-on-error: true
+        with:
+          script: |
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Liquidator bot failed for run at "$date"__"$time": Exit Code 1`
+            })

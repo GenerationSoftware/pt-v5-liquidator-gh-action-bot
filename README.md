@@ -54,7 +54,7 @@ Once the repository has been forked you can update your `Secrets` (under `Settin
 
 > <kbd><img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/screenshot-settings-2-jsonrpc.jpg?raw=true" /></kbd>
 
-`JSON_RPC_URL`: We will need JSON_RPC_URLs for each network you want to use. The following are required for each network you want the bot to run against: `BASE_MAINNET_JSON_RPC_URL`, `ARBITRUM_MAINNET_JSON_RPC_URL`, `OPTIMISM_MAINNET_JSON_RPC_URL`.
+`JSON_RPC_URL`: We will need JSON_RPC_URLs for each network you want to use. The following are required for each network you want the bot to run against: `ETHEREUM_MAINNET_JSON_RPC_URL`, `BASE_MAINNET_JSON_RPC_URL`, `ARBITRUM_MAINNET_JSON_RPC_URL`, `OPTIMISM_MAINNET_JSON_RPC_URL`, `SCROLL_MAINNET_JSON_RPC_URL`, `GNOSIS_MAINNET_JSON_RPC_URL`.
 
 > <kbd>
 <img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/screenshot-settings-4-privkey.jpg?raw=true" />
