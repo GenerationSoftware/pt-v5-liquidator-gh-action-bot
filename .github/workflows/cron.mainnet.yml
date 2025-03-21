@@ -1,7 +1,7 @@
 name: CronJob - Liquidator Bot - Ethereum Mainnet
 on:
   schedule:
-    - cron: "*/5 * * * *" # ie. 4:05pm, 4:10pm, 4:15pm ... etc.
+    - cron: "*/20 * * * *" # ie. 4:20pm, 4:40pm, 5:00pm ... etc.
   push:
 env:
   CHAIN_ID: 1
