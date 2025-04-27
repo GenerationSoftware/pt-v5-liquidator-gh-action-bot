@@ -16,6 +16,8 @@ You can simply fork this repo, enter your own custom environment variables in yo
 
 ### Installation:
 
+**NOTE ON NODE VERSIONS: Requires Node 20 or greater**
+
 [<img src="https://github.com/GenerationSoftware/pt-v5-liquidator-gh-action-bot/blob/main/images/video-thumb--new.jpg" width="50%">](https://www.youtube.com/watch?v=Dt-ibfZH-LU "Watch the 1-minute installation video")
 
 [Watch the 1-minute video](https://www.youtube.com/watch?v=Dt-ibfZH-LU), or:
