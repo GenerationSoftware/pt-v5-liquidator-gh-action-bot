@@ -1,7 +1,7 @@
 name: CronJob - Liquidator Bot - Arbitrum
 on:
   schedule:
-    - cron: "*/20 * * * *" # ie. 4:20pm, 4:40pm, 5:00pm ... etc.
+    - cron: "50 * * * *" # ie. 4:50pm, 5:50pm ... etc.
   push:
 env:
   CHAIN_ID: 42161
