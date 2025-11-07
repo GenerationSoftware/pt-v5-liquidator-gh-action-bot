@@ -13,6 +13,7 @@ env:
   CONTRACT_JSON_URL: 'https://raw.githubusercontent.com/GenerationSoftware/pt-v5-mainnet/8e1432b70c1f135966c1b70917675cd586dda7be/deployments/world/contracts.json'
   ENV_TOKEN_ALLOW_LIST: ''
   NODE_OPTIONS: "--max_old_space_size=32768"
+  CLAIM_REWARDS: true
 permissions: write-all
 jobs:
   runCLI:
